@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        
+        <script>
+            var source = new EventSource('/update');
+            source.onmessage = function(e){
+                const count = document.getElementById('count');
+                count.insertAdjacentHTML('afterbegin',e.data + '<br/>');};
+        </script>
+        
+    </head>
+    <body>
+        <h1>Slowness of the vehicles; (Average time taken by a vehicle to pass..)</h1>
+        <div id = "count"></div>
+    </body>
+</html>
+
+

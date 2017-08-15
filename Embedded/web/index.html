@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Traffic Light System</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This example creates a 2-pixel-wide red polyline showing the path of William
+      // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
+      // Brisbane, Australia.
+      
+      function myFunction() {
+        document.getElementById("demo").innerHTML = Math.min(5, 10);
+      }
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: {lat: 8.324181, lng: 80.414034}
+          
+        });
+
+        var flightPlanCoordinates = [
+          {lat: 8.324181, lng: 80.414034},
+          {lat: 8.326754, lng: 80.410398}
+         
+        ];
+        var flightPlanCoordinates0 = [
+          {lat: 8.326754, lng: 80.410398},
+          {lat: 8.328697, lng: 80.407509}
+         
+        ];
+        
+        var flightPlanCoordinates1 = [
+          {lat: 8.328697, lng: 80.407509},
+          {lat: 8.331934, lng: 80.403020}
+         
+        ];
+        
+        var flightPlanCoordinates11 = [
+         {lat: 8.326754, lng: 80.410398},
+          {lat:8.322242, lng:80.406991} 
+         
+        ];
+        
+        var flightPlanCoordinates12 = [
+         {lat: 8.326754, lng: 80.410398},
+          {lat:8.333957, lng:80.413705} 
+          
+        ];
+         
+        var flightPlanCoordinates01 = [
+         {lat: 8.324181, lng: 80.414034},
+          {lat:8.328352, lng:80.416827} 
+          
+        ];
+        
+        var flightPlanCoordinates02 = [
+         {lat: 8.324181, lng: 80.414034},
+          {lat:8.319438, lng:80.410566} 
+          
+        ];
+         
+        var flightPlanCoordinates03 = [
+         {lat: 8.324181, lng: 80.414034},
+          {lat:8.321986, lng:80.417765} 
+          
+        ];
+    
+    
+        var flightPlanCoordinates21 = [
+         {lat: 8.328697, lng: 80.407509},
+          {lat:8.324343, lng:80.404021} 
+          
+        ];
+        
+        var flightPlanCoordinates22 = [
+         {lat: 8.328697, lng: 80.407509},
+          {lat:8.335034, lng:80.410830} 
+          
+        ];
+        
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        var flightPath1 = new google.maps.Polyline({
+          path: flightPlanCoordinates1,
+          geodesic: true,
+          strokeColor: '#ff00d1',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath11 = new google.maps.Polyline({
+          path: flightPlanCoordinates11,
+          geodesic: true,
+          strokeColor: '#000fff',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath12 = new google.maps.Polyline({
+          path: flightPlanCoordinates12,
+          geodesic: true,
+          strokeColor: '#000fff',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath0 = new google.maps.Polyline({
+          path: flightPlanCoordinates0,
+          geodesic: true,
+          strokeColor: '#00ff00',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath01 = new google.maps.Polyline({
+          path: flightPlanCoordinates01,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath02 = new google.maps.Polyline({
+          path: flightPlanCoordinates02,
+          geodesic: true,
+          strokeColor: '#00ff00',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath03 = new google.maps.Polyline({
+          path: flightPlanCoordinates03,
+          geodesic: true,
+          strokeColor: '#ff00d1',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath21 = new google.maps.Polyline({
+          path: flightPlanCoordinates21,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+        
+        var flightPath22 = new google.maps.Polyline({
+          path: flightPlanCoordinates22,
+          geodesic: true,
+          strokeColor: '#00ff00',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+
+        flightPath.setMap(map);
+        flightPath0.setMap(map);
+        flightPath1.setMap(map);
+        flightPath11.setMap(map);
+        flightPath12.setMap(map);
+        flightPath01.setMap(map);
+        flightPath02.setMap(map);
+        flightPath03.setMap(map);
+        flightPath21.setMap(map);
+        flightPath22.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAamaa6_e6rEwDAvELYx6B_mzMF7OvgkWs&callback=initMap">
+    </script>
+  </body>
+</html>
